@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 
 
@@ -9,21 +10,25 @@ import { TeamComponent } from './team/team.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { appRoutes } from './app.routing';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PortfCaseComponent } from './portf-case/portf-case.component';
+import { PortfolioService } from './portfolio.service';
 
 
 @NgModule({
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(appRoutes),
+    NgbCarouselModule.forRoot()
+  ],
   declarations: [
     AppComponent,
     HomeComponent,
     TeamComponent,
     PortfolioComponent,
-    NavbarComponent
+    NavbarComponent,
+    PortfCaseComponent
   ],
-  imports: [
-    BrowserModule,
-    RouterModule.forRoot(appRoutes)
-  ],
-  providers: [],
+  providers: [ PortfolioService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

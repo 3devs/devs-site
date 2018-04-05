@@ -1,0 +1,12 @@
+<h2> {{case.title}} </h2>
+
+<ngb-carousel *ngIf="images">
+  <div *ngFor="let image of images">
+    <ng-template ngbSlide>
+      <img [src]="image" alt="Random third slide">
+      <div class="carousel-caption">
+        <p>{{case.description}}</p>
+      </div>
+    </ng-template>
+  </div>
+</ngb-carousel>
