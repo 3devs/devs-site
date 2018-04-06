@@ -1,1 +1,23 @@
-@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.card-img-wrap {
+  height: 300px;
+  overflow: hidden;
+  cursor: pointer;
+
+  .card-img-top {
+    transition: all 3s ease-out;
+    transform: scale(1);
+    transform-origin: top center;
+  }
+
+  &:hover {
+    .card-img-top {
+      transform: scale(1.5);
+    }
+  }
+}
+
+.carousel-item {
+  text-align: center;
+}

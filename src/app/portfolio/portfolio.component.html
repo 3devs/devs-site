@@ -1,22 +1,21 @@
 <main role="main">
-
-  <div class="album py-5 bg-light">
-    <div class="container">
-
-      <div class="row" *ngFor="let row of rows; trackBy: trackBy">
-
-        <div class="col-md-4" *ngFor="let cse of row; trackBy: trackByCase" [routerLink]="cse.id">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" [src]="caseImageUrl(cse)" [alt]="cse.description">
-            <div class="card-body">
-              <p class="card-text">{{cse.title}}</p>
+  <div class="album pb-5 bg-light">
+    <div class="row justify-content-center">
+      <div class="col-10">
+        <div class="row" *ngFor="let row of rows; trackBy: trackBy">
+          <div class="col-md-4" *ngFor="let cse of row; trackBy: trackByCase" [routerLink]="cse.id">
+            <div class="card mb-4 box-shadow">
+              <div class="card-img-wrap">
+                <img class="card-img-top" [src]="caseImageUrl(cse)" [alt]="cse.description">
+              </div>
+          
+              <div class="card-body">
+                <p class="card-text">{{cse.title}}</p>
+              </div>
             </div>
           </div>
         </div>
-
       </div>
-
     </div>
   </div>
-
 </main>
