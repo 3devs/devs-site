@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
-
+import { NgxGalleryModule } from 'ngx-gallery';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -18,7 +18,8 @@ import { PortfolioService } from './portfolio.service';
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    NgbCarouselModule.forRoot()
+    NgbCarouselModule.forRoot(),
+    NgxGalleryModule
   ],
   declarations: [
     AppComponent,

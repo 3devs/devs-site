@@ -2,6 +2,8 @@
   <div class="row justify-content-center">
     <div class="col-10">
       <h2 class="text-center"> {{case.title}} </h2>
+        <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+      <!--
       <ngb-carousel *ngIf="images">
         <div *ngFor="let image of images">
           <ng-template ngbSlide>
@@ -12,6 +14,7 @@
           </ng-template>
         </div>
       </ngb-carousel>
+    -->
     </div>
   </div>
 </main>
