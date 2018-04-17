@@ -10,7 +10,6 @@ import { PortfolioService, PortfolioCase } from '../portfolio.service';
 })
 export class PortfCaseComponent implements OnInit {
 
-
   constructor(private readonly route: ActivatedRoute, private readonly portfolio: PortfolioService) { }
 
   ngOnInit() {
