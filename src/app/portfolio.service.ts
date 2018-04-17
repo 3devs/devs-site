@@ -13,7 +13,7 @@ const CASES: PortfolioCase[] = [
     id: 'circ',
     count: 2,
     title: 'circ',
-    description: 'circ',
+    description: '',
     ext: 'jpg'
   },
   {
@@ -69,7 +69,7 @@ const CASES: PortfolioCase[] = [
     id: 'qr',
     count: 6,
     title: 'qr',
-    description: 'qr',
+    description: `    `,
     ext: 'png'
   },
   {
@@ -120,3 +120,31 @@ export class PortfolioService {
   }
 
 }
+
+
+/*
+
+Qlanir, service to organize business / private relationships. Several types of entities: Person, Organization, Service - user could create their own, set up links and other properties, search relations, find shortest paths and explore links graph, etc.
+
+Back end framework
+
+Microsoft Asp.NET (C#)
+
+Data bases
+
+MS SQL responsible for “backup” data, elastic search and neo4j structure could be restored from it at any moment.
+
+Elastic search is responsible for text search - fuzzy search, custom ranking etc.
+
+Neo4j allows to traverse and search relations graph efficiently, provides algorithms to find shortest paths between entities.
+
+Web application
+
+Framework angularjs (coffescript + modularized jade templates)
+
+Authentication
+
+NodeJs app using OAuth Json Web Tokens, supports connection to external authentication providers (google, facebook etc).
+
+
+*/
