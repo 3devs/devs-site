@@ -5,42 +5,94 @@
         <div class="col-auto">
           <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
         </div>
-    
-        <div class="col">
-          <h3>
-            Qlanir, service to organize business / private relationships. Several types of entities: Person,
-            Organization,
-            Service -
-            user could create their own entities, set up links bwtween them, define objects and relations properties.
-            Service provides
-            greate search capabilities such as search across relations, find shortest paths, explore links graph, etc.
-          </h3>
-      
-          <h4>
-            Back end framework
-          </h4>
-      
-          Microsoft Asp.NET (C#)
-      
-          <h4>Data bases</h4>
-      
-          MS SQL responsible for “backup” data, elastic search and neo4j structure could be restored from it at any
-          moment.
-          <br/> Elastic search is responsible for text search - fuzzy search, custom ranking etc.
-          <br/> Neo4j allows to traverse and search relations graph efficiently, provides algorithms to find shortest
-          paths between
-          entities.
-          <br/>
-          <h4>Web application</h4>
-      
-          Framework angularjs (coffescript + modularized jade templates)
-      
-          <h4>Authentication</h4>
-      
-          NodeJs app using OAuth Json Web Tokens, supports connection to external authentication providers (google,
-          facebook etc).
-    
-        </div>
+
+        <ng-container [ngSwitch]="case.id">
+
+          <div class="col" *ngSwitchCase="'qr'">
+
+            <h3>
+              Qlanir, service to organize business / private relationships. Several types of entities: Person, Organization, Service -
+              user could create their own entities, set up links bwtween them, define objects and relations properties. Service
+              provides greate search capabilities such as search across relations, find shortest paths, explore links graph,
+              etc.
+            </h3>
+
+            <h4>
+              Back end framework
+            </h4>
+
+            Microsoft Asp.NET (C#)
+
+            <h4>Data bases</h4>
+
+            MS SQL responsible for “backup” data, elastic search and neo4j structure could be restored from it at any moment.
+            <br/> Elastic search is responsible for text search - fuzzy search, custom ranking etc.
+            <br/> Neo4j allows to traverse and search relations graph efficiently, provides algorithms to find shortest paths
+            between entities.
+            <br/>
+            <h4>Web application</h4>
+
+            Framework angularjs (coffescript + modularized jade templates)
+
+            <h4>Authentication</h4>
+
+            NodeJs app using OAuth Json Web Tokens, supports connection to external authentication providers (google, facebook etc).
+
+          </div>
+
+          <div class="col" *ngSwitchCase="'rb'">
+
+            <h3>
+              Mobile application, cross platform, works on Android and IOS. Allows to get information about ski resorts such as: news,
+              messages from users, weather, snow cover, prices, etc. </h3>
+
+            <h4>
+              Backend
+            </h4>
+
+            Node application for RESET API (java script), hapijs framework
+
+            <br/> Workers to crawl the news, social web sites
+
+            <h4>Data bases</h4>
+
+            Mongodb, hosted on cloud (mongolab)
+            <br/> Elasticseah, for text search
+
+            <h4>Mobile app</h4>
+
+            Ionic AngularJS app
+
+            <h4>Authentication</h4>
+
+            Auth0
+
+          </div>
+
+          <div class="col" *ngSwitchCase="'tt'">
+
+              <h3>
+                  Price aggregator for touristic sites. Allows search tours by country / price and other parameters, users could create subscriptions and receive notifications when new items discovered for defined filter.
+                </h3>
+
+              <h4>
+                Backend
+              </h4>
+
+              Nodejs HapiJS framework
+
+              <h4>Data bases</h4>
+
+              Mongodb, Elasticsearch
+
+              <h4>Web App</h4>
+
+              Angularjs (coffee script)
+
+          </div>
+
+        </ng-container>
+
       </div>
     </div>
   </div>
